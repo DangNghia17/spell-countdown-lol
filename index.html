@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Spell LOL</title>
+    <link rel="icon" href="images/dragon_icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/spell.css">
+    <script>
+        const valueToTimeLeft = {
+            'images/flash.png': 300,
+            'images/Barrier_HD.png': 180,
+            'images/Teleport_HD.png': 360,
+            'images/exhaust.png': 210,
+            'images/ghost.png': 210,
+            'images/heal.png': 240,
+            'images/ignite.png': 180,
+            'images/smite.png': 77,
+            'images/thanh-tay.png': 210,
+            'images/dragon.png': 300,
+            'images/Rift_Herald_Render.png': 360,
+            'images/baron.png': 360,
+            'images/flash_sp.png': 255
+        };
+    </script>
+
+</head>
+<body>
+<div class="background-overlay"></div>
+
+<div class="row">
+    <!--    Mid Lane-->
+    <div class="col-md-6">
+        <div class="alerts-container mt-3"></div> <!-- Thêm container cho Alerts -->
+
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <img class="left-image" src="images/lanes/mid.png" alt="Hình ảnh bên trái">
+                <h5 style="color: #c8aa6e">Mid Lane</h5>
+            </div>
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png" selected>Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/flash.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png">Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png" selected>Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/ignite.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    End Mid Lane-->
+
+    <!--    Bot Lane-->
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <img class="left-image" src="images/lanes/bot.png" alt="Hình ảnh bên trái">
+                <h5 style="color: #c8aa6e">Bot Lane</h5>
+
+            </div>
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png" selected>Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/flash.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png">Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png" selected>Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/heal.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    End Bot Lane-->
+
+    <!--    Top Lane-->
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <img class="left-image" src="images/lanes/top.png" alt="Hình ảnh bên trái">
+                <h5 style="color: #c8aa6e">Top Lane</h5>
+            </div>
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png" selected>Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/flash.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png">Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png" selected>Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/Teleport_HD.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    End Top Lane-->
+
+    <!--    Support Lane-->
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <img class="left-image" src="images/lanes/support.png" alt="Hình ảnh bên trái">
+                <h5 style="color: #c8aa6e">Support Lane</h5>
+
+            </div>
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png" selected>Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/flash.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png">Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png" selected>Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/exhaust.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--   End Support Lane-->
+
+    <!--    Jungle Lane-->
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <img class="left-image" src="images/lanes/jungle.png" alt="Hình ảnh bên trái">
+                <h5 style="color: #c8aa6e">Jungle Lane</h5>
+
+            </div>
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png" selected>Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png">Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/flash.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash.png">Tốc biến</option>
+                    <option value="images/Barrier_HD.png">Lá chắn</option>
+                    <option value="images/Teleport_HD.png">Dịch chuyển</option>
+                    <option value="images/exhaust.png">Kiệt sức</option>
+                    <option value="images/ghost.png">Tăng tốc</option>
+                    <option value="images/heal.png">Heal</option>
+                    <option value="images/ignite.png">Thiêu đốt</option>
+                    <option value="images/smite.png" selected>Trừng phạt</option>
+                    <option value="images/thanh-tay.png">Thanh tẩy</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/smite.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    End Jungle Lane-->
+
+    <!--    Cave Lane-->
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <img class="left-image" src="images/dragon_icon.png" alt="Hình ảnh bên trái">
+                <h5 style="color: #c8aa6e">Cave</h5>
+
+            </div>
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/dragon.png" selected>Rồng</option>
+                    <option value="images/baron.png">Baron</option>
+                    <option value="images/Rift_Herald_Render.png">Sử giả</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/dragon.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/dragon.png" >Rồng</option>
+                    <option value="images/baron.png">Baron</option>
+                    <option value="images/Rift_Herald_Render.png" selected>Sử giả</option>
+
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/Rift_Herald_Render.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="image-selection-container">
+                <select class="image-select form-select-sm w-25">
+                    <option value="images/flash_sp.png" selected>Tốc biến sách phép</option>
+                </select>
+                <div class="image-container">
+                    <img class="selected-image" src="images/flash_sp.png" alt="Hình 1">
+                    <div class="button-container">
+                        <button class="button start-button btn btn-outline-success">Bắt đầu</button>
+                        <button class="button reset-button btn btn-outline-danger">Reset</button>
+                    </div>
+                    <div class="countdown-display">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    End Cave Lane-->
+
+</div>
+
+<div class="copyright">
+    &copy; 8/2023 Bản quyền coding thuộc về <i>Meaningg17</i>
+</div>
+<img src="images/logo_lol.png" height="70" width="230" style="margin-left: 1600px; margin-top: 20px"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="js/spell.js"></script>
+
+</body>
+</html>
